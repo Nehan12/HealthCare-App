@@ -39,7 +39,7 @@ export default function Index() {
   }, []);
 
   const handleLogin = () => {
-    if (username) {
+    if (username === 'nehan' && password === 'nehan123') {
       // Animate out before navigation
       Animated.parallel([
         Animated.timing(fadeAnim, {
@@ -57,7 +57,7 @@ export default function Index() {
         router.push(`/home?username=${username}`);
       });
     } else {
-      alert('Please enter a username');
+      alert('Invalid username or password');
     }
   };
 
